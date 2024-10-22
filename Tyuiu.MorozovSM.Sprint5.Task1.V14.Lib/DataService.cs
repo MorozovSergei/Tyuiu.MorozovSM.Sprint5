@@ -14,7 +14,7 @@ namespace Tyuiu.MorozovSM.Sprint5.Task1.V14.Lib
             for (int i = startValue; i <= stopValue; i++)
             {
                 if (i == 0) x = 0;
-                else x = Math.Round((Math.Sin(i) / (i + 1.7)) - Math.Cos(i) * 4 * i - 6,2);
+                x = Math.Round((Math.Sin(i) / (i + 1.7)) - Math.Cos(i) * 4 * i - 6,2);
                 if (i != stopValue) { File.AppendAllText(path, Convert.ToString(x) + '\n'); }
                 else { File.AppendAllText(path, Convert.ToString(x)); }
                 
