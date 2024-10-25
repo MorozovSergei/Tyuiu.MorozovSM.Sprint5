@@ -13,7 +13,7 @@ namespace Tyuiu.MorozovSM.Sprint5.Task5.V16.Lib
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    double num = Convert.ToDouble(line);
+                    double num = Convert.ToDouble(line.Replace(".", ","));
                     if (num % 10 == 0 && num > max) max = num;
                 }
             }
