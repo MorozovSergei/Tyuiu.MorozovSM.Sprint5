@@ -7,7 +7,8 @@ namespace Tyuiu.MorozovSM.Sprint5.Task4.V8.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double x = Convert.ToDouble(File.ReadAllText(path));
+            string StrX = File.ReadAllText(path);
+            double x = double.Parse(StrX.Replace(".",","));
             double y = Math.Round((Math.Pow(x, 2) / Math.Sin(x)) + 3, 3);
             return y;
         }
