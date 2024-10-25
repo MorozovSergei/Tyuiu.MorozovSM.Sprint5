@@ -16,7 +16,7 @@ namespace Tyuiu.MorozovSM.Sprint5.Task5.V16.Lib
                     string[] nums = line.Split(" ");
                     foreach (string numb in nums)
                     {
-                        double num = Convert.ToDouble(numb);
+                        double num = Convert.ToDouble(numb.Replace(".",","));
                         if (num % 10 == 0 && num > max) max = num;
                     }
                 }
