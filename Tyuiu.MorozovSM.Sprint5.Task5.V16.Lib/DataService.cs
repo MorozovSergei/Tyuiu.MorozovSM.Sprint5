@@ -10,7 +10,7 @@ namespace Tyuiu.MorozovSM.Sprint5.Task5.V16.Lib
             double max = double.MinValue;
             using (StreamReader sr = new StreamReader(path))
             {
-                string[] nums = sr.ReadLine().Split(" ");
+                string[] nums = sr.ReadLine();
                 foreach (string numb in nums)
                 { 
                     double num = Convert.ToDouble(numb.Replace(".", ","));
