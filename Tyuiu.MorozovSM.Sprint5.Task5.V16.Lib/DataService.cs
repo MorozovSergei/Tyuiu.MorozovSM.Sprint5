@@ -10,12 +10,18 @@ namespace Tyuiu.MorozovSM.Sprint5.Task5.V16.Lib
             double max = double.MinValue;
             using (StreamReader sr = new StreamReader(path))
             {
-                string[] nums = sr.ReadLine().Split(" ");
-                foreach (string numb in nums)
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    double num = Convert.ToDouble(numb);
-                    if (num % 10 == 0 && num > max) max = num;
+                    string[] nums = line.Split(" ");
+                    foreach (string numb in nums)
+                    {
+                        double num = Convert.ToDouble(numb);
+                        if (num % 10 == 0 && num > max) max = num;
+                    }
                 }
+                
+                
             }
             return Math.Round(max,3);
         }
