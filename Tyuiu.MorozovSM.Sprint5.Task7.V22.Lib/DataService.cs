@@ -13,7 +13,11 @@ namespace Tyuiu.MorozovSM.Sprint5.Task7.V22.Lib
                 while ((line = sr.ReadLine()) != null) 
                 {
                     line = line.Replace(".", "#");
-                    str+=line;
+                    line = line.Replace(",", "#");
+                    line = line.Replace("!", "#");
+                    line = line.Replace("?", "#");
+                    line = line.Replace("-", "#");
+                    str +=line;
                 }
             }
             string NewPath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V22.txt");
